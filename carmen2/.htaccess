@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^restapi/produkte/?$ restapi/handler.php
+RewriteRule ^restapi/produkte/([0-9]+)?$ restapi/handler.php?id=$1
+RewriteRule ^restapi/reservieren/?$ restapi/reserv.php
+RewriteRule ^restapi/reservieren/([0-9]+)?$ restapi/reserv.php?id=$1

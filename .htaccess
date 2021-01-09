@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule ^restapi/produkte/?$ restapi/handler.php
+RewriteRule ^restapi/produkte/([0-9]+)?$ restapi/handler.php?id=$1
+RewriteRule ^restapi/reservieren/?$ restapi/reserv.php
+RewriteRule ^restapi/reservieren/([0-9]+)?$ restapi/reserv.php?id=$1
+RewriteRule ^restapi/bestellungen/?$ restapi/bestellen.php
+RewriteRule ^restapi/bestellungen/([0-9]+)?$ restapi/bestellen.php?id=$1
+RewriteRule ^restapi/register_user/?$ restapi/register.php
+RewriteRule ^restapi/register_user/([0-9]+)?$ restapi/register.php?id=$1

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<title>Carmen - Wikipedia</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script  type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Crimson+Text|Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="wiki.js" type="text/javascript"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+    
+    <div class="page">
+        <div class="main-title" style="font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'; font-size: 70px; color:black;" href="">
+            <div>Carmen</div>
+            <div>Wikipedia</div>
+        </div>
+    
+        <div class="container">
+					<p style="text-align: center; color: black;">Wonach suchen Sie ...</p>
+
+            <form id="searchForm" class="form-inline text-center">
+                <div class="display-flex align-items-stretch justify-content-center col-lg-11">
+                    <input class="padding-1 margin-right-half" type="text" id="searchQuery" placeholder="zB Coffee usw...">
+                    <button class="btn btn-info" id="submit">Search</button>
+                </div>
+            </form>
+            <div id="return" class="text-center"><button class="btn btn-info" id="submit">Return to search</button></div>
+            <div id="result"></div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready( function() {
+            $('#result').hide();
+            $('#return').hide();
+           $('#submit').click( function() {
+               $('#searchForm').hide();
+               $('#return').fadeIn(1000);
+               $('#result').fadeIn(1000);
+           });
+        });
+    </script>
+    <script>
+        $(document).ready( function() {
+           $('#return').click( function() {
+               $('#result').hide();
+               $('#searchForm').fadeIn(1000);
+               $('#return').hide();
+           });
+        });
+    </script>
+</body>
+</html>

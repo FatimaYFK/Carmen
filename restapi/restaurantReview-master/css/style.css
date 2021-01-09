@@ -1,0 +1,486 @@
+/* GENERAL */
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    padding: 40px;
+    font-family: 'Acme', sans-serif;
+    background-image: linear-gradient(to right, rgb(52, 58, 64), rgba(52, 58, 64, 0.658));
+}
+
+.pageTitle {
+    color: transparent;
+    position: absolute;
+    text-align: center;
+    left: 12%;
+    top: 20%;
+}
+
+.pageTitle:before {
+    content: attr(data-text);
+    color: rgb(255, 136, 0);
+    overflow: hidden;
+    animation: type 15s steps(45);
+    white-space: nowrap;
+    position: absolute;
+    left: 12%;
+    top: 20%;
+}
+
+.pageTwoTitle {
+    color: transparent;
+    position: absolute;
+    text-align: center;
+    left: 12%;
+    top: 20%;
+}
+
+.pageTwoTitle:before {
+    content: attr(data-text);
+    color: rgb(255, 136, 0);
+    overflow: hidden;
+    animation: type 8s steps(18);
+    white-space: nowrap;
+    position: absolute;
+    left: 12%;
+    top: 20%;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+
+/* MAP */
+
+#map {
+    height: 680px;
+    width: 100%;
+}
+
+#showRestaurant {
+    height: 624px;
+    overflow: auto;
+}
+
+
+/* FIRST PAGE STYLE */
+
+.restaurantList {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('../img/assortedFood.jpg');
+    padding-top: 10px;
+}
+
+#sortByRating {
+    padding: 0;
+    height: 80px;
+    text-align: center;
+}
+
+.sortByRating {
+    color: black;
+    background-size: 200%;
+    background-image: linear-gradient(to left, rgb(255, 123, 0), rgb(255, 230, 0), rgb(255, 123, 0));
+    transition: 0.6s;
+}
+
+.sortByRating:hover {
+    background-position: right;
+}
+
+#sort {
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.labelSort {
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.restaurantLinks {
+    color: black;
+}
+
+.restaurantLinks:hover {
+    color: rgb(255, 136, 0);
+}
+
+
+/* SECOND PAGE STYLE */
+
+#displayReviewInfo {
+    padding: 0;
+    margin: 0;
+}
+
+#restaurantName {
+    background-image: linear-gradient(to left, rgb(255, 123, 0, 0.8), rgb(255, 230, 0, 0.8), rgb(255, 123, 0, 0.8));
+    padding: 10px;
+    text-align: center;
+}
+
+#nameRest {
+    color: red;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+}
+
+#streetView {
+    height: 680px;
+    width: 100%;
+}
+
+#infoRestaurant {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('../img/rate-info.png');
+    height: 533px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.displayReview {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0;
+}
+
+#noReview {
+    display: none;
+}
+
+
+/* RATING STARS STYLE */
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+}
+
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: rgb(248, 206, 11);
+}
+
+
+/* INFOWINDOW STYLE  */
+
+.gm-style .gm-style-iw-d {
+    overflow: hidden !important;
+}
+
+.gm-style .gm-style-iw-c {
+    padding: 0;
+}
+
+.infoDiv {
+    background-image: linear-gradient(141deg, rgb(159, 184, 173, 0.4) 0%, rgb(31, 200, 219, 0.4) 51%, rgb(44, 181, 232, 0.4) 75%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    height: 70px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.infoImage {
+    margin: 0;
+    max-height: 50px;
+    max-width: 100px;
+}
+
+.infoName {
+    font-size: small;
+    padding: 3px;
+}
+
+.infoRate {
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 0;
+    opacity: 0.5;
+}
+
+.infoLink {
+    text-decoration: underline;
+    margin-left: 5%;
+    font-size: 500;
+    color: black;
+}
+
+.infoLink:hover {
+    color: rgb(255, 136, 0);
+}
+
+
+/*  NEW RESTAURANT  FORM */
+
+#createRestaurant {
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('../img/infoImage.jpg');
+}
+
+button:focus {
+    outline: none;
+}
+
+.createRestHeading {
+    color: rgb(255, 136, 0);
+    padding: 5px;
+}
+
+#restName {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 2px;
+    width: 150px;
+    font-size: 14px;
+    color: black;
+}
+
+#restAddress {
+    padding: 8px;
+    border-radius: 2px;
+    width: 150px;
+    margin: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+input[type=text]:focus {
+    outline: 2px solid rgb(255, 136, 0);
+}
+
+.labelRest {
+    padding: 4px;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.addRestaurant {
+    color: white;
+    margin: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: rgb(255, 136, 0);
+    border: rgb(255, 136, 0);
+    outline: rgb(255, 136, 0);
+}
+
+.addRestaurant:hover {
+    color: black;
+}
+
+
+/* NEW REVIEW FORM */
+
+.modal {
+    text-align: center;
+}
+
+.modal-header {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(0, 0, 0));
+    color: rgb(255, 255, 255);
+}
+
+.modalClose {
+    margin-right: 10px !important;
+    padding: 0 !important;
+}
+
+.modal-body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('../img/rate-form.jpg');
+}
+
+textarea:focus,
+select:focus {
+    outline: 2px solid rgb(255, 136, 0);
+}
+
+.formReview {
+    margin: 10px;
+    width: 35%;
+}
+
+#authorName {
+    margin: 15px;
+    width: 35%;
+    padding: 2px;
+}
+
+#authorRating {
+    margin: 15px;
+    width: 35%;
+}
+
+#authorReview {
+    width: 100%;
+    min-height: 100px;
+    opacity: 0.8;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 3px;
+    text-indent: 5px;
+}
+
+#addReviewButton {
+    color: black;
+    background-size: 200%;
+    margin-left: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to left, rgb(18, 203, 196, 0.6), rgb(6, 82, 221, 0.6), rgb(18, 203, 196, 0.6));
+    transition: 0.6s;
+}
+
+.submitReview {
+    color: white;
+    background-size: 200%;
+    margin-left: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to left, #12CBC4, #0652DD, #12CBC4);
+    transition: 0.6s;
+}
+
+#addReviewButton:hover,
+.submitReview:hover {
+    background-position: right;
+}
+
+
+/* FOOTER */
+
+.footerLink {
+    color: rgb(255, 136, 0);
+}
+
+.footerLink:hover {
+    color: rgb(248, 206, 11);
+}
+
+.shortText {
+    display: none;
+}
+
+
+/* improve responsiveness for ipad */
+
+@media only screen and (max-width: 770px) {
+    .pageTitle {
+        font-size: 35px;
+        left: 5%;
+        top: 20%;
+    }
+    .pageTitle:before {
+        left: 5%;
+        top: 20%;
+    }
+    .pageTwoTitle {
+        left: 5%;
+        top: 20%;
+    }
+    .pageTwoTitle:before {
+        left: 5%;
+        top: 20%;
+    }
+}
+
+
+/* improve responsiveness for mobiles large screen */
+
+@media only screen and (max-width: 640px) {
+    .pageTitle {
+        display: none;
+    }
+    .shortText {
+        display: inline-block;
+        font-size: 30px;
+        color: transparent;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+    .shortText:before {
+        content: attr(data-text);
+        color: rgb(255, 136, 0);
+        overflow: hidden;
+        animation: type 10s steps(24);
+        white-space: nowrap;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+    .pageTwoTitle {
+        left: 5%;
+        top: 15%;
+    }
+    .pageTwoTitle:before {
+        left: 5%;
+        top: 15%;
+    }
+}
+
+
+/* improve responsiveness for mobiles small screen */
+
+@media only screen and (max-width: 480px) {
+    .pageTitle {
+        display: none;
+    }
+    .shortText {
+        display: inline-block;
+        font-size: 25px;
+        color: transparent;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+    .shortText:before {
+        content: attr(data-text);
+        color: rgb(255, 136, 0);
+        overflow: hidden;
+        animation: type 10s steps(24);
+        white-space: nowrap;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+    .pageTwoTitle {
+        left: 5%;
+        top: 15%;
+    }
+    .pageTwoTitle:before {
+        left: 5%;
+        top: 15%;
+    }
+}
